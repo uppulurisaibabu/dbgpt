@@ -1,13 +1,12 @@
-import type { Metadata } from "next"
-import { DM_Sans as Sans, PT_Serif as Serif } from 'next/font/google'
-import "./globals.css"
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
 
-const sans = Sans({ subsets: ["latin"], variable: "--font-sans" })
-const serif = Serif({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-serif" })
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "Ratio Fellowship - Scale Your SaaS Through Profitable Ads",
-  description: "We create a predictable, profitable, and scalable customer acquisition system for your SaaS startup using paid ads.",
+  title: 'DataGPT',
+  description: 'Advanced analytics. Proactive insights. Instant answers.',
 }
 
 export default function RootLayout({
@@ -17,11 +16,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${sans.variable} ${serif.variable} font-sans antialiased`}>
-        {children}
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   )
 }
-
 
