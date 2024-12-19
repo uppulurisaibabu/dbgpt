@@ -1,6 +1,6 @@
-import RevenueGraph from './revenue-graph'
-import Suggestions from './suggestions'
-import { Share2, ThumbsUp, MessageCircle } from 'lucide-react'
+// import RevenueGraph from './revenue-graph'
+// import Suggestions from './suggestions'
+// import { Share2, ThumbsUp, MessageCircle } from 'lucide-react'
 
 export default function Hero() {
   return (
@@ -20,34 +20,24 @@ export default function Hero() {
             </button>
           </div>
 
-          {/* Right Column */}
-          <div className="bg-white rounded-xl p-6 shadow-sm">
-            <div className="flex justify-between items-center mb-6">
-              <h2 className="font-medium">Revenue</h2>
-              <button className="text-blue-600 text-sm hover:underline">Read more</button>
-            </div>
-            
-            <RevenueGraph />
-
-            <div className="mt-8">
-              <Suggestions />
-            </div>
-
-            <div className="flex items-center space-x-4 mt-6 pt-4 border-t">
-              <button className="p-2 hover:bg-gray-100 rounded-full">
-                <Share2 className="w-5 h-5 text-gray-600" />
-              </button>
-              <button className="p-2 hover:bg-gray-100 rounded-full">
-                <ThumbsUp className="w-5 h-5 text-gray-600" />
-              </button>
-              <button className="p-2 hover:bg-gray-100 rounded-full">
-                <MessageCircle className="w-5 h-5 text-gray-600" />
-              </button>
-            </div>
+          {/* Right Column with Video */}
+          <div>
+            <video 
+              controls 
+              autoPlay 
+              muted 
+              loop 
+              className="w-full rounded-lg"
+            >
+              <source 
+                src="https://www.datagpt.com/videos/hero.mp4" 
+                type="video/mp4" 
+              />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </div>
     </section>
   )
 }
-
